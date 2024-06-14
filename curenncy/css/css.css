@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #353EA1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.currency,
+.swap-rate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.currency select {
+    padding: 10px;
+    border: 1px solid #dedede;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.currency input {
+    padding: 15px;
+    border: 2px solid #dedede;
+    font-size: 28px;
+    text-align: right;
+    width: 250px;
+}
+
+.swap-rate-container {
+    margin-top: 20px;
+}
+
+.btn {
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+
+}
+
+.rate {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.money-img {
+    width: 150px;
+}
+
+
+.slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+@media(max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .currency input {
+        width: 80%;
+    }
+
+    .btn {
+        width: 80%;
+    }
+}
